@@ -1,10 +1,14 @@
+require("@babel/register")
+require("regenerator-runtime/runtime");
+
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, {hydrate} from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+hydrate(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
